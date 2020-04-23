@@ -30,13 +30,12 @@ function listFunction(event) {
 
     if ((target.tagName !== 'LI') && (target.tagName !== 'I')) {
         target = target.closest('li');
-
         if (target.classList.contains('bg_two')) {
-            target.children[0].children[0].classList.add('none');
+            target.firstElementChild.firstElementChild.classList.add('none');
             target.children[1].classList.remove('text-decoration');
             target.classList.remove('bg_two');
         } else if (target.tagName !== 'I') {
-            target.children[0].children[0].classList.remove('none');
+            target.firstElementChild.firstElementChild.classList.remove('none');
             target.children[1].classList.add('text-decoration');
             target.classList.add('bg_two');
         }
